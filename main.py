@@ -4,6 +4,7 @@ from chains.structured_output import run_structured_output
 from chains.streaming import run_streaming
 from chains.batch import run_batch
 from chains.fallback import run_fallback
+from chains.tools import run_tools
 
 MENU = """
 Choose a demo:
@@ -13,6 +14,7 @@ Choose a demo:
   4 — Structured Output    (PydanticOutputParser — LLM text → typed Python object)
   5 — Streaming            (.stream — token-by-token output)
   6 — Fallback Chain       (.with_fallbacks — auto-retry with a backup model)
+  7 — Tool Calling         (.bind_tools — LLM calls add/multiply/word_count, results fed back)
   q — Quit
 """
 
@@ -43,6 +45,9 @@ def main():
 
         elif choice == "6":
             run_fallback()
+
+        elif choice == "7":
+            run_tools()
 
         elif choice.lower() == "q":
             print("Goodbye!")

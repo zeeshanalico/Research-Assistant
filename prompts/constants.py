@@ -33,6 +33,11 @@ FALLBACK_SYSTEM = (
     "You are a helpful assistant. Answer the user's question concisely."
 )
 
+TOOLS_SYSTEM = (
+    "You are a helpful assistant with access to tools. "
+    "Always use tools for mathematical operations."
+)
+
 
 # ────────────────────────────────────────────────────────────────────────────
 # PROMPT TEMPLATES (ready-to-use in chains)
